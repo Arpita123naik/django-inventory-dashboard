@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NexGen Inventory System</title>
+    
+    <!-- Google Fonts for a professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f4f6f9; }
+        .navbar { box-shadow: 0 2px 4px rgba(0,0,0,.08); }
+        .main-content { padding-top: 30px; padding-bottom: 50px; }
+        .card { border: none; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,.05); margin-bottom: 20px; }
+        .footer { background: white; padding: 20px 0; margin-top: auto; border-top: 1px solid #e3e6f0; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Professional Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/">NexGen Inventory</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link active" href="/">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="/product_list/">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+          </ul>
+          <form class="d-flex">
+             <a href="/logout/" class="btn btn-outline-light btn-sm">Logout</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container main-content flex-grow-1">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Professional Footer -->
+    <footer class="footer mt-auto">
+        <div class="container text-center text-muted">
+            <small>&copy; 2023 NexGen Inventory Systems. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
