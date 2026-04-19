@@ -1,5 +1,4 @@
-# django-inventory-dashboard
-Inventory Management System using Django with dashboard
+
 # Django Inventory Dashboard
 
 This is a web-based Inventory Management System developed using Django. It helps in managing products, tracking inventory, and performing CRUD operations through an interactive dashboard.
